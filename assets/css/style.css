@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+
+    --yellow-100: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+
+    --gap: 32px;
+    --radius: 12px;
+}
+
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+
+.social-dashboard {
+    width: 1120px;
+    height: 882px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:
+        324px
+        247px
+        247px;
+
+    grid-template-areas:
+        "create hero hero schedule"
+        "ai manage consistency schedule"
+        "ai stats growth growth";
+
+    gap: var(--gap);
+}
+
+
+.card {
+    padding: 32px;
+    border-radius: var(--radius);
+    background-color: var(--white);
+}
+
+.card h2 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.card p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.hero {
+    grid-area: hero;
+    background-color: var(--purple-500);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+}
+
+.hero h1 {
+    max-width: 520px;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 0.95;
+    margin-bottom: 28px;
+}
+
+.hero .highlight {
+    color: var(--yellow-500);
+    font-style: normal;
+}
+
+.hero .stars img {
+    width: 180px;
+    margin: 0 auto 14px;
+}
+
+.hero .subtext {
+    font-size: 18px;
+    color: var(--white);
+}
+
+
+.manage {
+    grid-area: manage;
+    background-color: var(--white);
+    padding: 32px;
+}
+
+.manage .handles {
+    margin-bottom: 22px;
+}
+
+.manage .handles img {
+    width: 100%;
+    max-width: none;
+}
+
+.manage h2 {
+    font-size: 28px;
+    line-height: 0.95;
+}
+
+
+.consistency {
+    grid-area: consistency;
+    background-color: var(--yellow-500);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 24px 24px 0;
+}
+
+.consistency h2 {
+    font-size: 28px;
+    line-height: 0.95;
+}
+
+.consistency .calendar {
+    margin-top: 20px;
+}
+
+.consistency .calendar img {
+    width: 100%;
+}
+
+
+.schedule {
+    grid-area: schedule;
+    background-color: var(--purple-100);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 15px 15px;
+}
+
+.schedule h2 {
+    font-size: 30px;
+    line-height: 0.95;
+}
+
+.schedule .chart {
+    margin: 28px 0;
+}
+
+.schedule .chart img {
+    width: 100%;
+    align-self: flex-end;
+}
+
+.schedule p {
+    margin-top: auto;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.growth {
+    grid-area: growth;
+    background-color: var(--purple-500);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 24px;
+}
+
+.growth .stats-block {
+    flex: 0 0 43%;
+}
+
+.growth .stats-block img {
+    width: 100%;
+}
+
+.growth h2 {
+    font-size: 38px;
+    line-height: 0.95;
+}
+
+
+.stats {
+    grid-area: stats;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.stats h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.stats .highlight {
+    display: block;
+    color: var(--black);
+    font-size: 62px;
+    font-weight: 500;
+    line-height: 0.9;
+    font-style: normal;
+    margin-bottom: 12px;
+}
+
+.stats .avatars {
+    margin-top: 20px;
+}
+
+.stats .avatars img {
+    width: 180px;
+}
+
+
+.create {
+    grid-area: create;
+    background-color: var(--yellow-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+}
+
+.create h2 {
+    font-size: 38px;
+    line-height: 0.95;
+}
+
+.create .highlight {
+    color: var(--purple-500);
+    font-style: italic;
+}
+
+.create img {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.ai {
+    grid-area: ai;
+    background-color: var(--yellow-500);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 0;
+}
+
+.ai h2 {
+    font-size: 38px;
+    line-height: 0.95;
+}
+
+.ai .chat-bubble {
+    margin-top: 28px;
+}
+
+.ai .chat-bubble img {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 32px 20px;
+    }
+
+    .social-dashboard {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "hero"
+            "manage"
+            "consistency"
+            "schedule"
+            "growth"
+            "stats"
+            "create"
+            "ai";
+        gap: 24px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .hero {
+        min-height: 228px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .manage {
+        min-height: 150px;
+    }
+
+    .consistency {
+        min-height: 180px;
+        padding-bottom: 0;
+    }
+
+    .schedule {
+        min-height: 370px;
+        padding: 32px;
+    }
+
+    .growth {
+        min-height: 300px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .growth .stats-block {
+        width: 75%;
+        flex: none;
+    }
+
+    .stats {
+        min-height: 190px;
+    }
+
+    .create {
+        min-height: 260px;
+    }
+
+    .ai {
+        min-height: 350px;
+        padding-bottom: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 24px 12px;
+    }
+
+    .social-dashboard {
+        max-width: 375px;
+        gap: 24px;
+    }
+
+    .card {
+        border-radius: 10px;
+        padding: 24px;
+    }
+
+    .hero {
+        min-height: 228px;
+        padding: 32px 24px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 0.95;
+        margin-bottom: 24px;
+    }
+
+    .hero .stars img {
+        width: 180px;
+    }
+
+    .hero .subtext {
+        font-size: 17px;
+    }
+    .manage {
+        min-height: 130px;
+    }
+
+    .manage .handles {
+        margin-bottom: 20px;
+    }
+
+    .manage h2 {
+        font-size: 26px;
+    }
+
+    .consistency {
+        min-height: 170px;
+        padding: 24px 24px 0;
+    }
+
+    .consistency h2 {
+        font-size: 26px;
+    }
+
+    .schedule {
+        min-height: 370px;
+        padding: 28px 24px;
+        text-align: center;
+    }
+
+    .schedule h2 {
+        font-size: 26px;
+    }
+
+    .schedule .chart {
+        margin: 24px 0;
+    }
+
+    .schedule p {
+        font-size: 17px;
+    }
+
+    .growth {
+        min-height: 290px;
+        padding: 28px 24px;
+    }
+
+    .growth .stats-block {
+        width: 78%;
+    }
+
+    .growth h2 {
+        font-size: 30px;
+    }
+
+    .stats {
+        min-height: 180px;
+        padding: 28px 24px;
+    }
+
+    .stats .highlight {
+        font-size: 52px;
+    }
+
+    .stats .avatars img {
+        width: 180px;
+    }
+
+    .create {
+        min-height: 250px;
+        padding: 28px 24px;
+    }
+
+    .create h2 {
+        font-size: 30px;
+    }
+
+    .create img {
+        width: 82%;
+        margin-top: 28px;
+    }
+
+    .ai {
+        min-height: 350px;
+        padding: 28px 24px 0;
+    }
+
+    .ai h2 {
+        font-size: 30px;
+    }
+
+    .ai .chat-bubble {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .create h2,
+    .ai h2 {
+        font-size: 28px;
+    }
+
+    .growth h2 {
+        font-size: 28px;
+    }
+}
